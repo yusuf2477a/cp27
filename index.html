@@ -1,0 +1,34 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+    <head>
+         <meta charset="UTF-8"> 
+         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+         <title>Array and Mapping Example</title> 
+        </head> 
+        <body>
+             <h1>Array and Mapping Example</h1> 
+             <ul id="number-list"></ul>
+              <ul id="user-list"></ul>
+    <script> 
+     const numbers = [1, 2, 3, 4, 5]; 
+      const doubledNumbers = numbers.map(number => number * 2); 
+       const numberList = document.getElementById('number-list');
+        doubledNumbers.forEach(number => { 
+            const listItem = document.createElement('li'); 
+            listItem.textContent = number;
+             numberList.appendChild(listItem); }); 
+         const users = [
+             { name: 'Alice', age: 25 },
+              { name: 'Bob', age: 30 },
+               { name: 'Charlie', age: 35 } 
+               ]; 
+                const userNames = users.map(user => user.name); 
+      const userList = document.getElementById('user-list'); 
+      userNames.forEach(name => { 
+        const listItem = document.createElement('li');
+         listItem.textContent = name; 
+         userList.appendChild(listItem);
+          });
+           </script> 
+           </body> 
+           </html>
